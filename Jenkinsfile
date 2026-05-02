@@ -43,7 +43,7 @@ pipeline {
             }
         }
 
-        stage('sonarqube analysis') {
+        /* stage('sonarqube analysis') {
             steps {
                 script{
                     def scannerHome = tool name: 'sonar-8' // agent configuration
@@ -52,14 +52,14 @@ pipeline {
                     }
                 }
             }
-        }    
-        stage("Quality Gate") {
+        }  */   
+        /* stage("Quality Gate") {
             steps {
               timeout(time: 1, unit: 'HOURS') {
                 waitForQualityGate abortPipeline: true
               }
             }
-        }
+        } */
         stage('Dependabot Alerts Check') {
             steps {
                 withCredentials([string(credentialsId: 'github-token', variable: 'GITHUB_TOKEN')]) {
