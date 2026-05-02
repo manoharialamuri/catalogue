@@ -120,8 +120,7 @@ pipeline {
                     }
                 }
             }
-        }
-    }   
+        }  
         stage('Trivy OS Scan') {
             steps {
                 script {
@@ -163,6 +162,7 @@ pipeline {
                 }
             }
         }
+    }
        /*  stage('Trivy Dockerfile Scan') 
         {
             steps {
