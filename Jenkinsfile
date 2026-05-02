@@ -225,4 +225,4 @@ pipeline {
             echo 'pipeline failure'
         }
     }
-}  
+
