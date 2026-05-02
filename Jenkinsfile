@@ -33,7 +33,7 @@ pipeline {
                 }
             }
         }
-        stage('Installing Dependencies') {
+        /* stage('Installing Dependencies') {
             steps {
                 script{
                     sh """
@@ -41,7 +41,7 @@ pipeline {
                     """
                 }
             }
-        }
+        } */
 
         /* stage('sonarqube analysis') {
             steps {
