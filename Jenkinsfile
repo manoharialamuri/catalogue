@@ -162,6 +162,21 @@ pipeline {
                 }
             }
         }
+        stage ('Push image to ECR'){
+            steps {
+               script{
+                    withAWS(credentials: 'aws-creds', region: "${region}") {
+                        // Commands here have AWS authentication
+                        sh """
+                            aws ecr get-login-password --region ${region} | docker login --username AWS --password-stdin ${acc_id}.dkr.ecr.us-east-1.amazonaws.com
+                            docker push ${acc_id}.dkr.ecr.${region}.amazonaws.com/roboshop/catalogue:${appVersion}
+                        """
+                    }
+                }
+            }
+        }
+    }
+
     }
        /*  stage('Trivy Dockerfile Scan') 
         {
