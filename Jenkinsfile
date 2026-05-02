@@ -177,7 +177,7 @@ pipeline {
         }
     }
 
-    }
+    
        /*  stage('Trivy Dockerfile Scan') 
         {
             steps {
@@ -225,4 +225,4 @@ pipeline {
             echo 'pipeline failure'
         }
     }
-
+}
