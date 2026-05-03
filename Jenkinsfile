@@ -11,5 +11,5 @@ if ( env.BRANCH_NAME.equalsIgnoreCase('main') ){
     echo "checking later"
 }
 else{
-    testPipeline(configMap)
+    testpipeline(configMap)
 }
