@@ -178,8 +178,7 @@ pipeline {
     }
 
     
-       /*  stage('Trivy Dockerfile Scan') 
-        {
+       stage('Trivy Dockerfile Scan') {
             steps {
                 script {
                     sh """
@@ -211,7 +210,6 @@ pipeline {
                 }
             }
         }
-  */
     // post-build
     post { 
         always { 
